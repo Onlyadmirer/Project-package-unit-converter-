@@ -8,3 +8,9 @@ konversi = {
     "kg": {"nama": "Kilogram(kg)", "nilai": 1000000},
     "ton":{"nama": "Ton", "nilai": 1000000000}
 }
+def berat(satuan1:str, satuan2:str, nilai:float):
+    try:
+        hasil = nilai * konversi[satuan1]["nilai"] / konversi[satuan2]["nilai"]
+        return f"{hasil:.2f} "
+    except KeyError:
+        print("input tidak valid")
