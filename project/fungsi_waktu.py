@@ -7,3 +7,5 @@ konversi_waktu = {
 
 def konversi_waktu_satuan(satuan1: str, satuan2: str, nilai: float):
     try:
+        hasil = nilai * konversi_waktu[satuan1]["nilai"] / konversi_waktu[satuan2]["nilai"]
+        return f"{hasil:.2f}"
