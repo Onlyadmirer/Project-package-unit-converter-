@@ -19,6 +19,9 @@ def kecepatan(satuan1: str, satuan2: str, nilai: float):
         return "Input tidak valid"
 
 # Contoh penggunaan fungsi kecepatan dengan berbagai satuan dan nilai
-print(kecepatan("km/h", "m/s", 100))  # Mengonversi 100 km/h ke m/s
-print(kecepatan("mph", "km/h", 60))   # Mengonversi 60 mph ke km/h
-print(kecepatan("m/s", "knot", 20))   # Mengonversi 20 m/s ke knot
+# print(kecepatan("km/h", "m/s", 100))  # Mengonversi 100 km/h ke m/s
+# print(kecepatan("mph", "km/h", 60))   # Mengonversi 60 mph ke km/h
+# print(kecepatan("m/s", "knot", 20))   # Mengonversi 20 m/s ke knot
+
+
+
