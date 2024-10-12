@@ -1,59 +1,48 @@
 # Project_8
 
-=======================================
-
 # Konversi Satuan Berat
 
-=======================================
-
-Untuk mengkonversi berat, Anda dapat menggunakan fungsi 'berat' dari modul 'fraier'.
 Berikut adalah contoh cara penggunaannya: 1. Import modul 'vertopy'
 
-          ```python
-             import vertopy
-          ```
+```python
+   import vertopy
+```
 
-       2. Tentukan nilai berat yang ingin dikonversi,
-          serta satuan asli dan satuan yang akan dikonversi.
-          Contoh:
+2. Tentukan nilai berat yang ingin dikonversi,
+   serta satuan asli dan satuan yang akan dikonversi.
+   Contoh:
 
-          ```python
-             from_unit = "g"  # satuan asli (gram)
-             to_unit = "kg"  # satuan yang akan dikonversi (kilogram)
-             nilai = 50  # nilai berat dalam gram yang akan dikonversi ke kilogram
-
-
-             CATATAN:
-             from_unit harus diisi string
-             to_unit harus diisi string
-             nilai harus diisi float/integer
-          ```
-
-       3. Panggil fungsi 'berat' dengan parameter 'from_unit', 'to_unit', dan 'nilai':
+```python
+   from_unit = "g"  # satuan asli (gram)
+   to_unit = "kg"  # satuan yang akan dikonversi (kilogram)
+   nilai = 50  # nilai berat dalam gram yang akan dikonversi ke kilogram
 
 
-          ```python
-             hasil = vertopy.berat(from_unit, to_unit, nilai)
-          ```
+   CATATAN:
+   from_unit harus diisi string
+   to_unit harus diisi string
+   nilai harus diisi float/integer
+```
 
-       4. Contoh lengkap:
+3. Panggil fungsi 'berat' dengan parameter 'from_unit', 'to_unit', dan 'nilai':
 
-          ```python
-             import vertopy
+```python
+   hasil = vertopy.berat(from_unit, to_unit, nilai)
+```
 
-             hasil = vertopy.berat("g", "kg", 50)
-             print(hasil)
+4. Contoh lengkap:
 
-             Output:
-             0.05 #jadi, 50 gram dikonversi ke kilogram adalah 0.05 kilogram
-          ```
-          ```
+```python
+   import vertopy
 
-=======================================
+   hasil = vertopy.berat("g", "kg", 50)
+   print(hasil)
 
-# Konversi Satuan Berat
+   Output:
+   0.05 #jadi, 50 gram dikonversi ke kilogram adalah 0.05 kilogram
+```
 
-=======================================
+# Konversi Satuan kecepatan
 
 Project ini adalah sebuah program sederhana untuk mengkonversi satuan kecepatan antara beberapa unit yang umum digunakan seperti
 meter per detik (m/s),
@@ -80,40 +69,33 @@ Berikut adalah contoh penggunaan dari fungsi `kecepatan()`:
 
 ```python
 # Mengonversi 100 km/h ke m/s
-print(kecepatan("km/h", "m/s", 100))  # Output: 27.78
+print(vertopy.kecepatan("km/h", "m/s", 100))  # Output: 27.78
 
 # Mengonversi 60 mph ke km/h
-print(kecepatan("mph", "km/h", 60))  # Output: 96.56
+print(vertopy.kecepatan("mph", "km/h", 60))  # Output: 96.56
 
 # Mengonversi 20 m/s ke knot
-print(kecepatan("m/s", "knot", 20))  # Output: 38.88
-
+print(vertopy.kecepatan("m/s", "knot", 20))  # Output: 38.88
+```
 
 Struktur Program :
+
 - konversi: Dictionary yang menyimpan satuan kecepatan dan faktor konversinya.
 - kecepatan(satuan1, satuan2, nilai): Fungsi untuk mengonversi nilai kecepatan dari satu satuan ke satuan lainnya.
 - try-except: Digunakan untuk menangani error jika satuan yang dimasukkan tidak valid.
 
 Satuan yang Didukung :
-- m/s  : Meter per detik
+
+- m/s : Meter per detik
 - km/h : Kilometer per jam
-- mph  : Mil per jam
+- mph : Mil per jam
 - knot : Knot (mil laut per jam)
 - mach : Mach (kecepatan suara di udara)
 
 Error Handling :
 Jika satuan yang dimasukkan tidak ditemukan dalam dictionary konversi, fungsi akan mengembalikan pesan "Input tidak valid". Hal ini ditangani menggunakan blok try-except.
 
-Lisensi :
-Proyek ini bersifat open-source dan dapat digunakan atau dimodifikasi sesuai kebutuhan.
-File `README.md` ini menjelaskan cara kerja kode, penggunaan, serta satuan-satuan yang didukung. Anda bisa menyesuaikan lebih lanjut sesuai kebutuhan proyek Anda.
-```
-
-=======================================
-
 # Konversi Satuan Panjang
-
-=======================================
 
 Aplikasi ini digunakan untuk mengkonversi satuan panjang dari satu satuan ke satuan lainnya. Aplikasi ini menggunakan fungsi panjang yang dapat mengkonversi satuan panjang dengan menggunakan tabel konversi yang telah ditentukan.
 
@@ -121,89 +103,77 @@ Aplikasi ini digunakan untuk mengkonversi satuan panjang dari satu satuan ke sat
 
 Untuk menggunakan aplikasi ini, Anda perlu memanggil fungsi panjang dengan tiga argumen:
 
-### 1. dari_satuan: satuan panjang awal yang ingin dikonversi
+1.  dari_satuan: satuan panjang awal yang ingin dikonversi
 
-### 2. ke_satuan : satuan panjang yang ingin dikonversi ke
+2.  ke_satuan : satuan panjang yang ingin dikonversi ke
 
-### 3. nilai : nilai yang ingin dikonversi
+3.  nilai : nilai yang ingin dikonversi
 
 ## Contoh:
 
-### print(panjang("km", "m", 5)) # Output: 5000.00
+```
+   print(vertopy.panjang("km", "m", 5)) # Output: 5000.00
+```
 
 Pada contoh di atas, fungsi panjang akan mengkonversi 5 kilometer menjadi meter.
 
 Satuan yang Didukung
 Aplikasi ini mendukung konversi antara satuan-satuan berikut:
 
-- **m (kilometer)**
-- **hm (hektometer)**
-- **dam (dekameter)**
-- **m (meter)**
-- **dm (desimeter)**
-- **cm (centimeter)**
-- **mm (milimeter)**
+- m (kilometer)
+- hm (hektometer)
+- dam (dekameter)
+- m (meter)
+- dm (desimeter)
+- cm (centimeter)
+- mm (milimeter)
 
 ## Error Handling
 
 Jika satuan yang dimasukkan tidak ditemukan, package akan mengembalikan pesan error "Satuan tidak ditemukan".
 
-## License
-
-Package ini dibuat dengan lisensi MIT. Anda bebas menggunakan dan memodifikasi aplikasi ini untuk keperluan Anda.
-
-=======================================
-
 # Konversi Satuan Suhu
-
-=======================================
 
 Untuk mengkonversi suhu, Anda dapat menggunakan fungsi 'suhu' dari modul 'vertopy'.
 Berikut adalah contoh cara penggunaannya: 1. Import modul 'vertopy'
 
-          ```python
-             import vertopy
-          ```
+```python
+   import vertopy
+```
 
-       2. Tentukan nilai suhu yang ingin dikonversi,
-          serta satuan awal dan satuan yang akan dikonversi.
-          Contoh:
+2. Tentukan nilai suhu yang ingin dikonversi,
+   serta satuan awal dan satuan yang akan dikonversi.
+   Contoh:
 
-          ```python
-             satuan1 = "c"  # satuan asli (celcius)
-             satuan2 = "k"  # satuan yang akan dikonversi (kelvin)
-             nilai = 50  # nilai suhu dalam celcius yang akan dikonversi ke kelvin
+```python
+   satuan1 = "c"  # satuan asli (celcius)
+   satuan2 = "k"  # satuan yang akan dikonversi (kelvin)
+   nilai = 50  # nilai suhu dalam celcius yang akan dikonversi ke kelvin
+```
 
+> CATATAN:
+> satuan1 harus diisi string
+> satuan2 harus diisi string
+> nilai harus diisi float/integer
 
-             CATATAN:
-             satuan1 harus diisi string
-             satuan2 harus diisi string
-             nilai harus diisi float/integer
-          ```
+3. Panggil fungsi 'suhu' dengan parameter 'satuan1', 'satuan2', dan 'nilai':
 
-       3. Panggil fungsi 'suhu' dengan parameter 'satuan1', 'satuan2', dan 'nilai':
+```python
+   hasil = vertopy.suhu(satuan, satuan2, nilai)
+```
 
-          ```python
-             hasil = vertopy.suhu(satuan, satuan2, nilai)
-          ```
+4. Contoh lengkap:
 
-       4. Contoh lengkap:
+```python
+   import vertopy
 
-          ```python
-             import vertopy
+   print(vertopy.suhu('c', 'k', 50))
+```
 
-             import vertopy
-             print(vertopy.suhu('c', 'k', 50))
-
-             Output:
-             323.15 #jadi, 50 celcius dikonversi ke kelvin adalah 323.15 kelvin
-          ```
-
-========================================
+> Output:
+> 323.15 #jadi, 50 celcius dikonversi ke kelvin adalah 323.15 kelvin
 
 # Konversi Waktu Berdasarkan Detik
-
-========================================
 
 ## Deskripsi
 
@@ -213,22 +183,24 @@ Program ini adalah kamus konversi waktu yang dapat mengubah nilai dari satu satu
 
 Program ini menggunakan kamus (`konversi_waktu`) yang menyimpan satuan waktu dan nilai konversinya dari detik. Berikut adalah satuan waktu yang didukung:
 
-- **Detik**: 1 detik = 1 detik
-- **Menit**: 1 menit = 60 detik
-- **Jam**: 1 jam = 3600 detik
-- **Hari**: 1 hari = 86400 detik
+- Detik: 1 detik = 1 detik
+- Menit: 1 menit = 60 detik
+- Jam: 1 jam = 3600 detik
+- Hari: 1 hari = 86400 detik
 
 ## Fungsi Utama
 
-### `konversi_waktu_satuan(satuan1: str, satuan2: str, nilai: float) -> str`
+```
+konversi_waktu_satuan(satuan1: str, satuan2: str, nilai: float) -> str
+```
 
 Fungsi ini digunakan untuk mengonversi nilai dari satu satuan waktu ke satuan waktu lainnya.
 
 #### Parameter:
 
-- **satuan1**: Satuan waktu awal (contoh: 'detik', 'menit', 'jam', 'hari')
-- **satuan2**: Satuan waktu target (contoh: 'detik', 'menit', 'jam', 'hari')
-- **nilai**: Nilai yang ingin dikonversi
+- satuan1: Satuan waktu awal (contoh: 'detik', 'menit', 'jam', 'hari')
+- satuan2: Satuan waktu target (contoh: 'detik', 'menit', 'jam', 'hari')
+- nilai: Nilai yang ingin dikonversi
 
 #### Return:
 
@@ -237,8 +209,8 @@ Fungsi ini digunakan untuk mengonversi nilai dari satu satuan waktu ke satuan wa
 #### Contoh Penggunaan:
 
 ```python
-print(konversi_waktu_satuan('detik', 'menit', 120))  # Output: "2.00"
-print(konversi_waktu_satuan('hari', 'jam', 1))       # Output: "24.00"
+print(vertopy.konversi_waktu_satuan('detik', 'menit', 120))  # Output: "2.00"
+print(vertopy.konversi_waktu_satuan('hari', 'jam', 1))       # Output: "24.00"
 ```
 
 ## Penanganan Error
